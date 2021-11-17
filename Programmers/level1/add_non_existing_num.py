@@ -1,6 +1,6 @@
 """
     programmers algorithm
-    last solved: 2021.10.18
+    last solved: 2021.11.17
     url: https://programmers.co.kr/learn/courses/30/lessons/86051
 """
 from common import print_solved
@@ -19,6 +19,10 @@ def solution_2(numbers):
         if number not in numbers:
             answer += number
     return answer
+
+
+def short_solution(numbers):
+    return sum([num for num in range(0, 10) if num not in numbers])
 
 
 if __name__ == "__main__":

@@ -1,6 +1,6 @@
 """
     programmers algorithm
-    last solved: 2021.10.22
+    last solved: 2021.11.17
     url: https://programmers.co.kr/learn/courses/30/lessons/12931
 """
 from common import print_solved

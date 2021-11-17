@@ -1,6 +1,6 @@
 """
     programmers algorithm
-    last solved: 2021.10.24
+    last solved: 2021.11.17
     url: https://programmers.co.kr/learn/courses/30/lessons/12901
 """
 from common import print_solved
@@ -16,6 +16,12 @@ def solution_2(a, b):
     months = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
     days = ['FRI', 'SAT', 'SUN', 'MON', 'TUE', 'WED', 'THU']
     return days[(sum(months[:a-1]) + b-1) % 7]
+
+
+def solution_3(a, b):
+    from datetime import datetime
+    days = ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"]
+    return days[datetime.strptime(f"2016-{a}-{b}", "%Y-%m-%d").weekday()]
 
 
 if __name__ == "__main__":
