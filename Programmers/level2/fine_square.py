@@ -14,11 +14,7 @@ def solution(w, h):
                 _gcd = max(_gcd, _i)
         return _gcd
 
-    gcd = _find_gcd(w, h)
-    small_rect_w = w // gcd
-    small_rect_h = h // gcd
-    small_spoiled_rect_count = small_rect_h + small_rect_w - 1
-    return w * h - small_spoiled_rect_count * gcd
+    return w * h - (w + h - _find_gcd(w, h))
 
 
 if __name__ == "__main__":
