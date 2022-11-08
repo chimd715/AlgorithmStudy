@@ -3,5 +3,5 @@ venv/
 
 # pycharm
 .idea/
-*.pyc
+**/*.pyc
 
