@@ -11,14 +11,8 @@ def solution(arr):
 
 
 if __name__ == "__main__":
-    solutions = [
-        solution([1, 2, 3, 4]),
-        solution([5, 5])
-    ]
+    solutions = [solution([1, 2, 3, 4]), solution([5, 5])]
 
-    answers = [
-        2.5,
-        5
-    ]
+    answers = [2.5, 5]
 
     print_solved(solutions, answers)

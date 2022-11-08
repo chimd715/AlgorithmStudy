@@ -31,14 +31,9 @@ if __name__ == "__main__":
         solution("one4seveneight"),
         solution("23four5six7"),
         solution("2three45sixseven"),
-        solution("123")
+        solution("123"),
     ]
 
-    answers = [
-        1478,
-        234567,
-        234567,
-        123
-    ]
+    answers = [1478, 234567, 234567, 123]
 
     print_solved(solutions, answers)

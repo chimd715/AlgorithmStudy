@@ -11,12 +11,8 @@ def solution(seoul):
 
 
 if __name__ == "__main__":
-    solutions = [
-        solution(["Jane", "Kim"])
-    ]
+    solutions = [solution(["Jane", "Kim"])]
 
-    answers = [
-        1
-    ]
+    answers = [1]
 
     print_solved(solutions, answers)

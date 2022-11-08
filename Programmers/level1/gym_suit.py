@@ -7,7 +7,7 @@ from common import print_solved
 
 
 def solution(n, lost, reserve):
-    people = [0] * (n+2)
+    people = [0] * (n + 2)
     for index in lost:
         people[index] -= 1
 
@@ -16,11 +16,11 @@ def solution(n, lost, reserve):
 
     for i, person in enumerate(people):
         if person < 0:
-            if people[i-1] > 0:
-                people[i-1] -= 1
+            if people[i - 1] > 0:
+                people[i - 1] -= 1
                 people[i] += 1
-            elif people[i+1] > 0:
-                people[i+1] -= 1
+            elif people[i + 1] > 0:
+                people[i + 1] -= 1
                 people[i] += 1
 
     people[0] = 0
@@ -38,11 +38,11 @@ def solution_2(n, lost, reserve):
 
     answer = n - len(_lost)
     for _l in _lost:
-        if _l-1 in _reserve:
-            _reserve.remove(_l-1)
+        if _l - 1 in _reserve:
+            _reserve.remove(_l - 1)
             answer += 1
-        elif _l+1 in _reserve:
-            _reserve.remove(_l+1)
+        elif _l + 1 in _reserve:
+            _reserve.remove(_l + 1)
             answer += 1
 
     return answer
@@ -53,14 +53,9 @@ if __name__ == "__main__":
         solution(5, [2, 4], [1, 3, 5]),
         solution(5, [2, 4], [3]),
         solution(5, [2, 4, 5], [3, 5]),
-        solution(3, [3], [1])
+        solution(3, [3], [1]),
     ]
 
-    answers = [
-        5,
-        4,
-        4,
-        2
-    ]
+    answers = [5, 4, 4, 2]
 
     print_solved(solutions, answers)

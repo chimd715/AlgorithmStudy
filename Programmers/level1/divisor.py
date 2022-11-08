@@ -23,14 +23,8 @@ def solution(left, right):
 
 
 if __name__ == "__main__":
-    solutions = [
-        solution(13, 17),
-        solution(24, 27)
-    ]
+    solutions = [solution(13, 17), solution(24, 27)]
 
-    answers = [
-        43,
-        52
-    ]
+    answers = [43, 52]
 
     print_solved(solutions, answers)

@@ -11,18 +11,8 @@ def solution(x):
 
 
 if __name__ == "__main__":
-    solutions = [
-        solution(10),
-        solution(12),
-        solution(11),
-        solution(13)
-    ]
+    solutions = [solution(10), solution(12), solution(11), solution(13)]
 
-    answers = [
-        True,
-        True,
-        False,
-        False
-    ]
+    answers = [True, True, False, False]
 
     print_solved(solutions, answers)

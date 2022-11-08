@@ -4,17 +4,14 @@ def solution(a):
 
     balloon_obj = []
     for i, item in enumerate(a):
-        balloon_obj.append({
-            'num': item,
-            'index': i
-        })
-    balloon_obj.sort(key=lambda x: x['num'])
+        balloon_obj.append({"num": item, "index": i})
+    balloon_obj.sort(key=lambda x: x["num"])
 
-    a = min(balloon_obj[0]['index'], balloon_obj[1]['index'])
-    b = max(balloon_obj[0]['index'], balloon_obj[1]['index'])
+    a = min(balloon_obj[0]["index"], balloon_obj[1]["index"])
+    b = max(balloon_obj[0]["index"], balloon_obj[1]["index"])
     count = 0
     for i in range(2, len(balloon_obj)):
-        c = balloon_obj[i]['index']
+        c = balloon_obj[i]["index"]
 
         if b < c or c < a:
             a = min(a, c)

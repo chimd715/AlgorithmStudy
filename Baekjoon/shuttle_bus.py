@@ -4,7 +4,7 @@ def solution(n, t, m, timetable):
     def _stringify_time(num):
         return f"{num // 60:02d}:{num % 60:02d}"
 
-    bus_time = 540      # 09:00
+    bus_time = 540  # 09:00
     crews = []
     for time in timetable:
         crews.append(60 * int(time[:2]) + int(time[3:]))
@@ -13,16 +13,13 @@ def solution(n, t, m, timetable):
 
     bus_crews = []
     for i in range(n):
-        bus_info = {
-            'bus_time': bus_time,
-            'crews': []
-        }
+        bus_info = {"bus_time": bus_time, "crews": []}
 
         crew_count = 0
         for crew in crews:
-            if crew > bus_time or len(bus_info['crews']) >= m:
+            if crew > bus_time or len(bus_info["crews"]) >= m:
                 break
-            bus_info['crews'].append(crew)
+            bus_info["crews"].append(crew)
             crew_count += 1
 
         for j in range(crew_count):
@@ -31,9 +28,9 @@ def solution(n, t, m, timetable):
 
         bus_time = bus_time + t
 
-    if len(bus_crews[-1]['crews']) < m:
-        return _stringify_time(bus_crews[-1]['bus_time'])
-    return _stringify_time(bus_crews[-1]['crews'][-1] - 1)
+    if len(bus_crews[-1]["crews"]) < m:
+        return _stringify_time(bus_crews[-1]["bus_time"])
+    return _stringify_time(bus_crews[-1]["crews"][-1] - 1)
 
 
 # 2021.10.17
@@ -81,9 +78,31 @@ solutions = [
     solution(1, 1, 5, ["08:00", "08:01", "08:02", "08:03"]),
     solution(2, 10, 2, ["09:10", "09:09", "08:00"]),
     solution(2, 1, 2, ["09:00", "09:00", "09:00", "09:00"]),
-    solution(1, 1, 5, 	["00:01", "00:01", "00:01", "00:01", "00:01"]),
-    solution(1, 1, 1, ["23:59"]) ,
-    solution(10, 60, 45, ["23:59", "23:59", "23:59", "23:59", "23:59", "23:59", "23:59", "23:59", "23:59", "23:59", "23:59", "23:59", "23:59", "23:59", "23:59", "23:59"])
+    solution(1, 1, 5, ["00:01", "00:01", "00:01", "00:01", "00:01"]),
+    solution(1, 1, 1, ["23:59"]),
+    solution(
+        10,
+        60,
+        45,
+        [
+            "23:59",
+            "23:59",
+            "23:59",
+            "23:59",
+            "23:59",
+            "23:59",
+            "23:59",
+            "23:59",
+            "23:59",
+            "23:59",
+            "23:59",
+            "23:59",
+            "23:59",
+            "23:59",
+            "23:59",
+            "23:59",
+        ],
+    ),
 ]
 
 solved = True

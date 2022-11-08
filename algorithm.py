@@ -11,12 +11,8 @@ def solution():
 
 
 if __name__ == "__main__":
-    solutions = [
-        solution()
-    ]
+    solutions = [solution()]
 
-    answers = [
-        None
-    ]
+    answers = [None]
 
     print_solved(solutions, answers)

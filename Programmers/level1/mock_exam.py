@@ -21,18 +21,14 @@ def solution(answers):
             correct_problem_list[2].append(i)
 
     max_score = max([len(_list) for _list in correct_problem_list])
-    return [i+1 for i, _list in enumerate(correct_problem_list) if len(_list) == max_score]
+    return [
+        i + 1 for i, _list in enumerate(correct_problem_list) if len(_list) == max_score
+    ]
 
 
 if __name__ == "__main__":
-    solutions = [
-        solution([1, 2, 3, 4, 5]),
-        solution([1, 3, 2, 4, 2])
-    ]
+    solutions = [solution([1, 2, 3, 4, 5]), solution([1, 3, 2, 4, 2])]
 
-    answers = [
-        [1],
-        [1, 2, 3]
-    ]
+    answers = [[1], [1, 2, 3]]
 
     print_solved(solutions, answers)

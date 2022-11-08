@@ -13,12 +13,9 @@ def solution(strings, n):
 if __name__ == "__main__":
     solutions = [
         solution(["sun", "bed", "car"], 1),
-        solution(["abce", "abcd", "cdx"], 2)
+        solution(["abce", "abcd", "cdx"], 2),
     ]
 
-    answers = [
-        ["car", "bed", "sun"],
-        ["abcd", "abce", "cdx"]
-    ]
+    answers = [["car", "bed", "sun"], ["abcd", "abce", "cdx"]]
 
     print_solved(solutions, answers)

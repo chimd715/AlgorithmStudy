@@ -7,7 +7,7 @@ from common import print_solved
 
 
 def compress(s, size):
-    tokens = [s[size*i:size*i+size] for i in range(len(s)//size+2)]
+    tokens = [s[size * i : size * i + size] for i in range(len(s) // size + 2)]
     count = 0
     current_comparison = tokens[0]
     compressed_string = ""
@@ -15,14 +15,16 @@ def compress(s, size):
         if current_comparison == token and i != len(tokens) - 1:
             count += 1
             continue
-        compressed_string += f"{count}{current_comparison}" if count > 1 else current_comparison
+        compressed_string += (
+            f"{count}{current_comparison}" if count > 1 else current_comparison
+        )
         current_comparison = token
         count = 1
     return compressed_string
 
 
 def solution(s):
-    return min([len(compress(s, i)) for i in range(1, len(s)+1)])
+    return min([len(compress(s, i)) for i in range(1, len(s) + 1)])
 
 
 if __name__ == "__main__":
@@ -31,15 +33,9 @@ if __name__ == "__main__":
         solution("ababcdcdababcdcd"),
         solution("abcabcdede"),
         solution("abcabcabcabcdededededede"),
-        solution("xababcdcdababcdcd")
+        solution("xababcdcdababcdcd"),
     ]
 
-    answers = [
-        7,
-        9,
-        8,
-        14,
-        17
-    ]
+    answers = [7, 9, 8, 14, 17]
 
     print_solved(solutions, answers)

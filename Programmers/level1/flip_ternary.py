@@ -10,16 +10,16 @@ def change_base(n, base):
     changed_n = ""
     while n > 0:
         """
-            quotient = n // base
-            remainder = n % base
-    
-            n = quotient
-            changed_n = str(remainder) + changed_n
-            
-            ==>
-            
-            n, r = divmod(n, base)
-            changed_n = str(r) + changed_n
+        quotient = n // base
+        remainder = n % base
+
+        n = quotient
+        changed_n = str(remainder) + changed_n
+
+        ==>
+
+        n, r = divmod(n, base)
+        changed_n = str(r) + changed_n
         """
         n, r = divmod(n, base)
         changed_n = str(r) + changed_n
@@ -32,14 +32,8 @@ def solution(n):
 
 
 if __name__ == "__main__":
-    solutions = [
-        solution(45),
-        solution(125)
-    ]
+    solutions = [solution(45), solution(125)]
 
-    answers = [
-        7,
-        229
-    ]
+    answers = [7, 229]
 
     print_solved(solutions, answers)

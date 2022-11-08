@@ -14,14 +14,8 @@ def solution(n):
 
 
 if __name__ == "__main__":
-    solutions = [
-        solution(10),
-        solution(12)
-    ]
+    solutions = [solution(10), solution(12)]
 
-    answers = [
-        3,
-        11
-    ]
+    answers = [3, 11]
 
     print_solved(solutions, answers)

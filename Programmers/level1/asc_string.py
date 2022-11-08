@@ -7,16 +7,12 @@ from common import print_solved
 
 
 def solution(s):
-    return ''.join(sorted([char for char in s], key=lambda x: ord(x), reverse=True))
+    return "".join(sorted([char for char in s], key=lambda x: ord(x), reverse=True))
 
 
 if __name__ == "__main__":
-    solutions = [
-        solution("Zbcdefg")
-    ]
+    solutions = [solution("Zbcdefg")]
 
-    answers = [
-        "gfedcbZ"
-    ]
+    answers = ["gfedcbZ"]
 
     print_solved(solutions, answers)

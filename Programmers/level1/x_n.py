@@ -7,20 +7,12 @@ from common import print_solved
 
 
 def solution(x, n):
-    return [i * x for i in range(1, n+1)]
+    return [i * x for i in range(1, n + 1)]
 
 
 if __name__ == "__main__":
-    solutions = [
-        solution(2, 5),
-        solution(4, 3),
-        solution(-4, 2)
-    ]
+    solutions = [solution(2, 5), solution(4, 3), solution(-4, 2)]
 
-    answers = [
-        [2, 4, 6, 8, 10],
-        [4, 8, 12],
-        [-4, -8]
-    ]
+    answers = [[2, 4, 6, 8, 10], [4, 8, 12], [-4, -8]]
 
     print_solved(solutions, answers)

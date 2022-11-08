@@ -1,5 +1,3 @@
-
-
 def print_solved(solutions, answers):
     solved = True
     for i, solution in enumerate(solutions):

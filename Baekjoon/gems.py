@@ -27,7 +27,7 @@ def solution(gems):
             # print("pop gem")
             if distance > end_pos - start_pos:
                 distance = end_pos - start_pos
-                answer = [start_pos+1, end_pos+1]
+                answer = [start_pos + 1, end_pos + 1]
                 # print(f"update distance: {distance}")
 
             gem = gems[start_pos]

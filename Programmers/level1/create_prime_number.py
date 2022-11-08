@@ -17,9 +17,9 @@ def solution(nums):
     answer = 0
     for i in range(len(nums)):
         first_num = nums[i]
-        for j in range(i+1, len(nums)):
+        for j in range(i + 1, len(nums)):
             second_num = nums[j]
-            for k in range(j+1, len(nums)):
+            for k in range(j + 1, len(nums)):
                 third_num = nums[k]
 
                 answer += 1 if is_prime(first_num + second_num + third_num) else 0
@@ -38,14 +38,8 @@ def solution_2(nums):
 
 
 if __name__ == "__main__":
-    solutions = [
-        solution([1, 2, 3, 4]),
-        solution([1, 2, 7, 6, 4])
-    ]
+    solutions = [solution([1, 2, 3, 4]), solution([1, 2, 7, 6, 4])]
 
-    answers = [
-        1,
-        4
-    ]
+    answers = [1, 4]
 
     print_solved(solutions, answers)

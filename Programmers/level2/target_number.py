@@ -22,12 +22,8 @@ def solution(numbers, target):
 
 
 if __name__ == "__main__":
-    solutions = [
-        solution([1, 1, 1, 1, 1], 3)
-    ]
+    solutions = [solution([1, 1, 1, 1, 1], 3)]
 
-    answers = [
-        5
-    ]
+    answers = [5]
 
     print_solved(solutions, answers)

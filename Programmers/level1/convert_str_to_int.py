@@ -11,14 +11,8 @@ def solution(s):
 
 
 if __name__ == "__main__":
-    solutions = [
-        solution("1234"),
-        solution("-1234")
-    ]
+    solutions = [solution("1234"), solution("-1234")]
 
-    answers = [
-        1234,
-        -1234
-    ]
+    answers = [1234, -1234]
 
     print_solved(solutions, answers)

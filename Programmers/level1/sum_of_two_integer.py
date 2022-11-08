@@ -18,16 +18,8 @@ def solution_2(a, b):
 
 
 if __name__ == "__main__":
-    solutions = [
-        solution(3, 5),
-        solution(3, 3),
-        solution(5, 3)
-    ]
+    solutions = [solution(3, 5), solution(3, 3), solution(5, 3)]
 
-    answers = [
-        12,
-        3,
-        12
-    ]
+    answers = [12, 3, 12]
 
     print_solved(solutions, answers)

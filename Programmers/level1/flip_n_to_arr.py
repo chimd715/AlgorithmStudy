@@ -11,14 +11,8 @@ def solution(n):
 
 
 if __name__ == "__main__":
-    solutions = [
-        solution(12345),
-        solution(10000000000)
-    ]
+    solutions = [solution(12345), solution(10000000000)]
 
-    answers = [
-        [5, 4, 3, 2, 1],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
-    ]
+    answers = [[5, 4, 3, 2, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]]
 
     print_solved(solutions, answers)

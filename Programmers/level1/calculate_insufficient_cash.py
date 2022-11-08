@@ -12,12 +12,8 @@ def solution(price, money, count):
 
 
 if __name__ == "__main__":
-    solutions = [
-        solution(3, 20, 4)
-    ]
+    solutions = [solution(3, 20, 4)]
 
-    answers = [
-        10
-    ]
+    answers = [10]
 
     print_solved(solutions, answers)

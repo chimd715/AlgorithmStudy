@@ -12,7 +12,9 @@ def collatz(num, count=0):
     if num == 1:
         return count
 
-    return collatz(num/2, count + 1) if num % 2 == 0 else collatz(num*3 + 1, count + 1)
+    return (
+        collatz(num / 2, count + 1) if num % 2 == 0 else collatz(num * 3 + 1, count + 1)
+    )
 
 
 def solution(num):
@@ -20,16 +22,8 @@ def solution(num):
 
 
 if __name__ == "__main__":
-    solutions = [
-        solution(6),
-        solution(16),
-        solution(626331)
-    ]
+    solutions = [solution(6), solution(16), solution(626331)]
 
-    answers = [
-        8,
-        4,
-        -1
-    ]
+    answers = [8, 4, -1]
 
     print_solved(solutions, answers)

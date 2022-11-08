@@ -18,18 +18,12 @@ def solution(arr):
 
 
 def short_solution(arr):
-    return [num for i, num in enumerate(arr) if num != arr[i-1] or i == 0]
+    return [num for i, num in enumerate(arr) if num != arr[i - 1] or i == 0]
 
 
 if __name__ == "__main__":
-    solutions = [
-        solution([1, 1, 3, 3, 0, 1, 1]),
-        solution([4, 4, 4, 3, 3])
-    ]
+    solutions = [solution([1, 1, 3, 3, 0, 1, 1]), solution([4, 4, 4, 3, 3])]
 
-    answers = [
-        [1, 3, 0, 1],
-        [4, 3]
-    ]
+    answers = [[1, 3, 0, 1], [4, 3]]
 
     print_solved(solutions, answers)

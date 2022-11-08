@@ -16,12 +16,9 @@ def solution(absolutes, signs):
 if __name__ == "__main__":
     solutions = [
         solution([4, 7, 12], [True, False, True]),
-        solution([1, 2, 3], [False, False, True])
+        solution([1, 2, 3], [False, False, True]),
     ]
 
-    answers = [
-        9,
-        0
-    ]
+    answers = [9, 0]
 
     print_solved(solutions, answers)

@@ -10,14 +10,14 @@ import re
 def shift_str(s):
     answer = ""
     for char in s:
-        if ord('a') <= ord(char) < ord('z'):
+        if ord("a") <= ord(char) < ord("z"):
             answer += chr(ord(char) + 1)
-        elif char == 'z':
-            answer += 'a'
-        elif ord('A') <= ord(char) < ord('Z'):
+        elif char == "z":
+            answer += "a"
+        elif ord("A") <= ord(char) < ord("Z"):
             answer += chr(ord(char) + 1)
-        elif char == 'Z':
-            answer += 'A'
+        elif char == "Z":
+            answer += "A"
         else:
             answer += char
     return answer
@@ -31,16 +31,8 @@ def solution(s, n):
 
 
 if __name__ == "__main__":
-    solutions = [
-        solution("AB", 1),
-        solution("z", 1),
-        solution("a B z", 4)
-    ]
+    solutions = [solution("AB", 1), solution("z", 1), solution("a B z", 4)]
 
-    answers = [
-        "BC",
-        "a",
-        "e F d"
-    ]
+    answers = ["BC", "a", "e F d"]
 
     print_solved(solutions, answers)

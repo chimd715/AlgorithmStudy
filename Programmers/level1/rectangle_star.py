@@ -8,7 +8,7 @@ from common import print_solved
 
 def solution(a, b):
     # a, b = map(int, input().strip().split(' '))
-    for line in ['*' * a] * b:
+    for line in ["*" * a] * b:
         print(line)
 
 

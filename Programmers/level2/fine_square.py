@@ -18,12 +18,8 @@ def solution(w, h):
 
 
 if __name__ == "__main__":
-    solutions = [
-        solution(8, 12)
-    ]
+    solutions = [solution(8, 12)]
 
-    answers = [
-        80
-    ]
+    answers = [80]
 
     print_solved(solutions, answers)

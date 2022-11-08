@@ -25,9 +25,6 @@ if __name__ == "__main__":
         solution([2, 2, 3, 3], 10),
     ]
 
-    answers = [
-        3,
-        4
-    ]
+    answers = [3, 4]
 
     print_solved(solutions, answers)

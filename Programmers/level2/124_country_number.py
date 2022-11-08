@@ -21,7 +21,7 @@ def solution_2(n):
     rebase = ["1", "2", "4"]
     based_num = ""
     while n > 0:
-        n, remainder = divmod(n-1, 3)
+        n, remainder = divmod(n - 1, 3)
         based_num = str(rebase[remainder]) + based_num
     return based_num
 
@@ -38,21 +38,9 @@ if __name__ == "__main__":
         solution(8),
         solution(9),
         solution(10),
-        solution(11)
+        solution(11),
     ]
 
-    answers = [
-        "1",
-        "2",
-        "4",
-        "11",
-        "12",
-        "14",
-        "21",
-        "22",
-        "24",
-        "41",
-        "42"
-    ]
+    answers = ["1", "2", "4", "11", "12", "14", "21", "22", "24", "41", "42"]
 
     print_solved(solutions, answers)

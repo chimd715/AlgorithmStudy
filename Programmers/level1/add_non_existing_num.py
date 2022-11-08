@@ -26,14 +26,8 @@ def short_solution(numbers):
 
 
 if __name__ == "__main__":
-    solutions = [
-        solution([1, 2, 3, 4, 6, 7, 8, 0]),
-        solution([5, 8, 4, 0, 6, 7, 9])
-    ]
+    solutions = [solution([1, 2, 3, 4, 6, 7, 8, 0]), solution([5, 8, 4, 0, 6, 7, 9])]
 
-    answers = [
-        14,
-        6
-    ]
+    answers = [14, 6]
 
     print_solved(solutions, answers)

@@ -1,9 +1,5 @@
 def assert_s(s):
-    opposite_parentheses = {
-        "]": "[",
-        "}": "{",
-        ")": "("
-    }
+    opposite_parentheses = {"]": "[", "}": "{", ")": "("}
 
     stack = []
     for item in s:

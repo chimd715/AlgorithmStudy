@@ -14,10 +14,10 @@ def solution(rows, columns, queries):
 
         moved = []
         temp = matrix[x1][y1]
-        for i in range(y1+1, y2+1):
+        for i in range(y1 + 1, y2 + 1):
             moved.append(temp)
             matrix[x1][i], temp = temp, matrix[x1][i]
-        for i in range(x1+1, x2+1):
+        for i in range(x1 + 1, x2 + 1):
             moved.append(temp)
             matrix[i][y2], temp = temp, matrix[i][y2]
         for i in range(y1, y2)[::-1]:
@@ -34,13 +34,9 @@ if __name__ == "__main__":
     solutions = [
         solution(6, 6, [[2, 2, 5, 4], [3, 3, 6, 6], [5, 1, 6, 3]]),
         solution(3, 3, [[1, 1, 2, 2], [1, 2, 2, 3], [2, 1, 3, 2], [2, 2, 3, 3]]),
-        solution(100, 97, [[1, 1, 100, 97]])
+        solution(100, 97, [[1, 1, 100, 97]]),
     ]
 
-    answers = [
-        [8, 10, 25],
-        [1, 1, 5, 3],
-        [1]
-    ]
+    answers = [[8, 10, 25], [1, 1, 5, 3], [1]]
 
     print_solved(solutions, answers)

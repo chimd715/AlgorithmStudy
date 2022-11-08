@@ -8,6 +8,7 @@ from common import print_solved
 
 def solution(scoville, K):
     import heapq
+
     heap = sorted(scoville)
 
     count = 0
@@ -34,8 +35,8 @@ def heap_solution(scoville, K):
             self.append(data)
 
             i = len(self) - 1
-            while i // 2 > 0 and self[i] < self[i//2]:
-                self[i//2], self[i] = self[i], self[i//2]
+            while i // 2 > 0 and self[i] < self[i // 2]:
+                self[i // 2], self[i] = self[i], self[i // 2]
                 i = i // 2
 
         def remove_root(self):
@@ -44,15 +45,15 @@ def heap_solution(scoville, K):
             self.pop()
 
             i = 1
-            while i*2+1 < len(self):
-                compare_index = i * 2 if self[i*2] <= self[i*2+1] else i * 2 + 1
+            while i * 2 + 1 < len(self):
+                compare_index = i * 2 if self[i * 2] <= self[i * 2 + 1] else i * 2 + 1
                 if self[i] > self[compare_index]:
                     self[i], self[compare_index] = self[compare_index], self[i]
                     i = compare_index
                 else:
                     break
-            if len(self) == i*2+1 and self[i] > self[i*2]:
-                self[i], self[i*2] = self[i*2], self[i]
+            if len(self) == i * 2 + 1 and self[i] > self[i * 2]:
+                self[i], self[i * 2] = self[i * 2], self[i]
             return popped_item
 
     heap = Heap()
@@ -84,14 +85,8 @@ def simple_solution(scoville, K):
 
 
 if __name__ == "__main__":
-    solutions = [
-        solution([1, 2, 3, 9, 10, 12], 7),
-        solution([1, 2, 3, 9, 10, 12], 106)
-    ]
+    solutions = [solution([1, 2, 3, 9, 10, 12], 7), solution([1, 2, 3, 9, 10, 12], 106)]
 
-    answers = [
-        2,
-        -1
-    ]
+    answers = [2, -1]
 
     print_solved(solutions, answers)

@@ -26,12 +26,9 @@ def solution_3(a, b):
 if __name__ == "__main__":
     solutions = [
         solution([1, 2, 3, 4], [-3, -1, 0, 2]),
-        solution([-1, 0, 1], [1, 0, -1])
+        solution([-1, 0, 1], [1, 0, -1]),
     ]
 
-    answers = [
-        3,
-        -2
-    ]
+    answers = [3, -2]
 
     print_solved(solutions, answers)

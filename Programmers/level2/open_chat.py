@@ -9,29 +9,37 @@ from common import print_solved
 def solution(records):
     users = {}
     for record in records:
-        record = record + ' ' if record.startswith('Leave') else record
-        command, user_id, name = record.split(' ')
+        record = record + " " if record.startswith("Leave") else record
+        command, user_id, name = record.split(" ")
 
-        if command == 'Enter':
+        if command == "Enter":
             users[user_id] = name
-        elif command == 'Change':
+        elif command == "Change":
             users[user_id] = name
 
     answer = []
     for record in records:
-        record = record + ' ' if record.startswith('Leave') else record
-        command, user_id, name = record.split(' ')
+        record = record + " " if record.startswith("Leave") else record
+        command, user_id, name = record.split(" ")
 
-        if command == 'Enter':
+        if command == "Enter":
             answer.append(f"{users[user_id]}님이 들어왔습니다.")
-        elif command == 'Leave':
+        elif command == "Leave":
             answer.append(f"{users[user_id]}님이 나갔습니다.")
     return answer
 
 
 if __name__ == "__main__":
     solutions = [
-        solution(["Enter uid1234 Muzi", "Enter uid4567 Prodo", "Leave uid1234", "Enter uid1234 Prodo", "Change uid4567 Ryan"])
+        solution(
+            [
+                "Enter uid1234 Muzi",
+                "Enter uid4567 Prodo",
+                "Leave uid1234",
+                "Enter uid1234 Prodo",
+                "Change uid4567 Ryan",
+            ]
+        )
     ]
 
     answers = [
